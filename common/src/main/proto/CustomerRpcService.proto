@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "me.mircea.grpcpoc.common";
+
+import "google/protobuf/empty.proto";
+
+service CustomerService {
+  rpc findCustomer(IDRequest) returns (CustomerReply);
+  rpc findCustomers(google.protobuf.Empty) returns (stream CustomerReply);
+}
+
+message IDRequest {
+  string id = 1;
+}
+
+message CustomerReply {
+  string id = 1;
+  string name = 2;
+  string registeredOn = 3;
+}
