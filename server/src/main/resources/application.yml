@@ -4,5 +4,14 @@ spring:
     username: developer
     password: developer
     driverClassName: org.h2.Driver
+#    initialization-mode: always
   jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show_sql: true
     open-in-view: false
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+

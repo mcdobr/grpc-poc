@@ -16,9 +16,9 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class CustomerService {
-    private CustomerRepository customerRepository;
+    private final CustomerRepository customerRepository;
 
-    private CustomerEntityToDtoMapper mapper;
+    private final CustomerEntityToDtoMapper mapper;
 
     public List<CustomerDto> findAll() {
         return customerRepository.findAll()

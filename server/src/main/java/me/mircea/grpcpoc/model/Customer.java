@@ -26,9 +26,19 @@ public class Customer {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @OneToOne
-    @JoinColumn(name = "address_id", nullable = false)
-    private Address shippingAddress;
+    @Column(name = "email", nullable = false)
+    private String email;
+
+    @Column(name = "phone_number", nullable = false)
+    private String phoneNumber;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "gender")
+    private Gender gender;
+
+//    @OneToOne
+//    @JoinColumn(name = "address_id", nullable = false)
+//    private Address shippingAddress;
 
     @Column(name = "registered_on", nullable = false)
     private Instant registeredOn;
