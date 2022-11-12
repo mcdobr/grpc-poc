@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>me.mircea.grpcpoc</groupId>
-	<artifactId>server</artifactId>
+	<artifactId>customer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>server</name>
+	<name>customer</name>
 	<description>API for GRPC proof of concept</description>
 	<properties>
 		<java.version>17</java.version>

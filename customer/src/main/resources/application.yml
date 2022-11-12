@@ -1,16 +1,24 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:db
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;
     username: developer
     password: developer
     driverClassName: org.h2.Driver
 #    initialization-mode: always
   jpa:
+    generate-ddl: true
     hibernate:
       ddl-auto: create-drop
       show_sql: true
     open-in-view: false
     defer-datasource-initialization: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
   sql:
     init:
       mode: always

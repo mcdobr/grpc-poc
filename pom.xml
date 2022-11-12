@@ -17,8 +17,8 @@
 
     <modules>
         <module>common</module>
-        <module>client</module>
-        <module>server</module>
+        <module>order</module>
+        <module>customer</module>
     </modules>
 
     <build>

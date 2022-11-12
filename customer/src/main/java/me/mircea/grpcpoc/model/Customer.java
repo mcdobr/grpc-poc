@@ -33,12 +33,11 @@ public class Customer {
     private String phoneNumber;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "gender")
+    @Column(name = "gender", nullable = false)
     private Gender gender;
 
-//    @OneToOne
-//    @JoinColumn(name = "address_id", nullable = false)
-//    private Address shippingAddress;
+    @Column(name = "address", nullable = false)
+    private String address;
 
     @Column(name = "registered_on", nullable = false)
     private Instant registeredOn;

@@ -7,6 +7,9 @@ import "google/protobuf/empty.proto";
 service CustomerService {
   rpc findCustomer(IDRequest) returns (CustomerReply);
   rpc findCustomers(google.protobuf.Empty) returns (stream CustomerReply);
+  rpc createCustomer(CustomerRegistration) returns (CustomerReply);
+  rpc editCustomer(CustomerContactEdit) returns (CustomerReply);
+  rpc deleteCustomer(IDRequest) returns (google.protobuf.Empty);
 }
 
 message IDRequest {
@@ -17,4 +20,30 @@ message CustomerReply {
   string id = 1;
   string name = 2;
   string registeredOn = 3;
+}
+
+enum Gender {
+  MALE = 0;
+  FEMALE = 1;
+  NON_BINARY = 2;
+}
+
+message CustomerRegistration {
+  string name = 1;
+
+  string email = 2;
+
+  string phoneNumber = 3;
+
+  Gender gender = 4;
+
+  string address = 5;
+}
+
+message CustomerContactEdit {
+  string email = 1;
+
+  string phoneNumber = 2;
+
+  string address = 3;
 }
