@@ -6,10 +6,19 @@ import "google/protobuf/empty.proto";
 
 service CustomerService {
   rpc findCustomer(IDRequest) returns (CustomerReply);
+
+  // Server side streaming, client sends one request and receives back multiple replies
   rpc findCustomers(google.protobuf.Empty) returns (stream CustomerReply);
+
+  // Bidirectional streaming, client sends multiple requests and receives a reply for each
+  rpc findCustomersByIDs(stream IDRequest) returns (stream CustomerReply);
+
   rpc createCustomer(CustomerRegistration) returns (CustomerReply);
   rpc editCustomer(CustomerContactEdit) returns (CustomerReply);
   rpc deleteCustomer(IDRequest) returns (google.protobuf.Empty);
+
+  // Client side streaming, client sends many messages and receives back one value (e.g: get statistics)
+  rpc deleteCustomers(stream IDRequest) returns (BatchDeleteResponse);
 }
 
 message IDRequest {
@@ -19,7 +28,11 @@ message IDRequest {
 message CustomerReply {
   string id = 1;
   string name = 2;
-  string registeredOn = 3;
+  string email = 3;
+  string phoneNumber = 4;
+  Gender gender = 5;
+  string address = 6;
+  string registeredOn = 7;
 }
 
 enum Gender {
@@ -41,9 +54,15 @@ message CustomerRegistration {
 }
 
 message CustomerContactEdit {
-  string email = 1;
+  string id = 1;
 
-  string phoneNumber = 2;
+  string email = 2;
 
-  string address = 3;
+  string phoneNumber = 3;
+
+  string address = 4;
+}
+
+message BatchDeleteResponse {
+  uint32 total = 1;
 }

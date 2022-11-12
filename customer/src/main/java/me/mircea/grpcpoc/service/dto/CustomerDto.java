@@ -5,7 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import me.mircea.grpcpoc.common.Gender;
 
+import java.time.Instant;
 import java.util.UUID;
 
 @Getter
@@ -21,4 +23,16 @@ public class CustomerDto {
 
     @JsonProperty("email")
     private String email;
+
+    @JsonProperty("phoneNumber")
+    private String phoneNumber;
+
+    @JsonProperty("gender")
+    private Gender gender;
+
+    @JsonProperty("address")
+    private String address;
+
+    @JsonProperty("registeredOn")
+    private Instant registeredOn;
 }

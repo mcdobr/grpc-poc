@@ -3,6 +3,7 @@ package me.mircea.grpcpoc.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import me.mircea.grpcpoc.common.Gender;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;

@@ -26,6 +26,4 @@ public class CustomerController {
     public CustomerDto findCustomer(@PathVariable("customer-id") UUID id) {
         return customerService.findById(id);
     }
-
-
 }
