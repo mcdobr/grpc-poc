@@ -2,9 +2,9 @@ package me.mircea.grpcpoc.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.mircea.grpcpoc.common.CustomerContactEdit;
-import me.mircea.grpcpoc.common.CustomerRegistration;
-import me.mircea.grpcpoc.common.IDRequest;
+import me.mircea.grpcpoc.customer.CustomerContactEdit;
+import me.mircea.grpcpoc.customer.CustomerRegistration;
+import me.mircea.grpcpoc.customer.IDRequest;
 import me.mircea.grpcpoc.mapper.CustomerEntityToDtoMapper;
 import me.mircea.grpcpoc.model.Customer;
 import me.mircea.grpcpoc.repository.CustomerRepository;

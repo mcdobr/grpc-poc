@@ -57,7 +57,7 @@
 
         <dependency>
             <groupId>me.mircea.grpcpoc</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>customer-api</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

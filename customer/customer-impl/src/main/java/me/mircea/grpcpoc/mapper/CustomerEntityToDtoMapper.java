@@ -1,15 +1,9 @@
 package me.mircea.grpcpoc.mapper;
 
 import lombok.NoArgsConstructor;
-import me.mircea.grpcpoc.common.Gender;
 import me.mircea.grpcpoc.model.Customer;
 import me.mircea.grpcpoc.service.dto.CustomerDto;
 import org.springframework.stereotype.Component;
-
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import java.time.Instant;
 
 @Component
 @NoArgsConstructor

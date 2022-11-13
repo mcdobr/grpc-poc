@@ -3,10 +3,15 @@ package me.mircea.grpcpoc.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import me.mircea.grpcpoc.common.Gender;
+import me.mircea.grpcpoc.customer.Gender;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.Instant;
 import java.util.UUID;
 

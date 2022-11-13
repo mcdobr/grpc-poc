@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import me.mircea.grpcpoc.common.Gender;
+import me.mircea.grpcpoc.customer.Gender;
 
 import java.time.Instant;
 import java.util.UUID;
