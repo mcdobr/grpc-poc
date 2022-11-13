@@ -1,0 +1,10 @@
+server:
+  port: 8083
+
+grpc:
+  server:
+    port: 9093
+  client:
+    customer:
+      address: 'static://127.0.0.1:9090'
+      negotiationType: plaintext

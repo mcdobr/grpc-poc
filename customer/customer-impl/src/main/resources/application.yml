@@ -5,6 +5,9 @@ spring:
     password: developer
     driverClassName: org.h2.Driver
 #    initialization-mode: always
+  grpc:
+    server:
+      port: 9090
   jpa:
     generate-ddl: true
     hibernate:
