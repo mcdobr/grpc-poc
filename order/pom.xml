@@ -28,6 +28,9 @@
         <grpc.version>1.50.2</grpc.version>
         <jakarta.annotation-api.version>1.3.5</jakarta.annotation-api.version>
         <grpc-spring-boot-starter.version>2.13.1.RELEASE</grpc-spring-boot-starter.version>
+        <customer.service.version>0.0.1-SNAPSHOT</customer.service.version>
+        <delivery.service.version>0.0.1-SNAPSHOT</delivery.service.version>
+        <inventory.service.version>0.0.1-SNAPSHOT</inventory.service.version>
     </properties>
 
     <dependencyManagement>
@@ -48,6 +51,24 @@
                 <groupId>jakarta.annotation</groupId>
                 <artifactId>jakarta.annotation-api</artifactId>
                 <version>${jakarta.annotation-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>me.mircea.grpcpoc</groupId>
+                <artifactId>customer-api</artifactId>
+                <version>${customer.service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>me.mircea.grpcpoc</groupId>
+                <artifactId>delivery-api</artifactId>
+                <version>${delivery.service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>me.mircea.grpcpoc</groupId>
+                <artifactId>inventory-api</artifactId>
+                <version>${inventory.service.version}</version>
             </dependency>
 
         </dependencies>
