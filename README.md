@@ -16,4 +16,6 @@ OrderService -> CustomerService
 where you would have some internal communication between these services.
 
 ## Tools
-- [Postman](https://kreya.app/downloads/)
+- [Postman](https://www.postman.com/)
+
+You need to create an gRPC API by importing the proto file in `customer-api` module.
