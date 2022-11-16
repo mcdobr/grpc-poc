@@ -114,6 +114,11 @@ public class CustomerGrpcService extends CustomerServiceGrpc.CustomerServiceImpl
         return CustomerReply.newBuilder()
                 .setId(customer.getId().toString())
                 .setName(customer.getName())
+                .setAddress(customer.getAddress())
+                .setGender(customer.getGender())
+                .setEmail(customer.getEmail())
+                .setPhoneNumber(customer.getPhoneNumber())
+                .setRegisteredOn(customer.getRegisteredOn().toString())
                 .build();
     }
 }
